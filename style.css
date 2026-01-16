@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Sora";
+  src: url("assets/fonts/Sora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("assets/fonts/Sora-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* CORES */
+  --verde: #1fb450;
+  --roxo-medio: #332b80;
+  --roxo-forte: #080055;
+  --roxo-claro: #7822a9;
+  --branco-romance: #fcfcfc;
+  --lilas: #e9caff;
+  --lilas-claro: #f4e4ff;
+  --azul-claro: #99cccd;
+
+  /* FONTES */
+  --fonte-texto: "Sora", sans-serif;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--branco-romance);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--roxo-forte);
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--roxo-forte);
+}
+
+p {
+  font-size: 14px;
+  color: var(--roxo-forte);
+}
+
+/* HEADER */
+
+header {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.228);
+  display: flex;
+  padding: 11px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-header {
+  display: block;
+  color: white;
+  background-color: var(--verde);
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+/* HERO SECTION */
+
+.tit-hero {
+  margin: 22px 20px;
+}
+
+.tit-hero-destaque {
+  font-weight: 700;
+}
+
+.subtit-hero {
+  font-size: 18px;
+  margin: 32px 20px;
+  color: var(--roxo-forte);
+}
+
+.btn-cta-hero {
+  font-size: 14px;
+  display: block;
+  color: white;
+  background-color: var(--verde);
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 12px;
+  width: 170px;
+  max-width: 250px;
+  margin: 32px 20px;
+  text-align: center;
+}
+
+.box-img-hero {
+  text-align: end;
+}
+
+.img-hero-mobile {
+  position: relative;
+  width: 90%;
+  height: 90%;
+}
+
+.scroll-inifinito {
+  padding: 8px 0px;
+  background-color: var(--azul-claro);
+  color: white;
+}
+
+.text-scroll-infinito {
+  color: white !important;
+}
+
+.problema {
+  padding: 12px 20px;
+}
+
+.tit-problema {
+  text-align: center;
+  margin:0px;
+}
+
+.tit-problema-destaque {
+  font-weight: 700;
+}
+
+.text-problema {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.text-problema-destaque {
+  font-weight: 700;
+}
