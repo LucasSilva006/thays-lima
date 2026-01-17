@@ -47,12 +47,23 @@ h1 {
 }
 
 h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--roxo-forte);
+}
+
+h3 {
   font-size: 16px;
   font-weight: 400;
   color: var(--roxo-forte);
 }
 
 p {
+  font-size: 14px;
+  color: var(--roxo-forte);
+}
+
+li {
   font-size: 14px;
   color: var(--roxo-forte);
 }
@@ -134,7 +145,7 @@ header {
 
 .tit-problema {
   text-align: center;
-  margin:0px;
+  margin: 0px;
 }
 
 .tit-problema-destaque {
@@ -148,4 +159,319 @@ header {
 
 .text-problema-destaque {
   font-weight: 700;
+}
+
+.custom-shape-divider-top-1768677988 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1768677988 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 22px;
+}
+
+.custom-shape-divider-top-1768677988 .shape-fill {
+  fill: #fcfcfc;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1768677988 svg {
+    width: calc(100% + 1.3px);
+    height: 15px;
+  }
+}
+
+.solucao {
+  background: linear-gradient(180deg, #332b80 0%, #050034 100%);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.tit-solucao {
+  color: var(--branco-romance);
+  font-size: 14px;
+  margin-top: 24px;
+}
+.tit-solucao-destaque {
+  font-weight: 700;
+}
+
+.box-dos-cards-solucao {
+  margin-top: 24px;
+}
+
+.card-solucao {
+  background-color: var(--branco-romance);
+  padding: 18px 18px;
+  margin: 0 18px 24px;
+  border-radius: 16px;
+  text-align: start;
+}
+
+.tit-card-solucao {
+  font-weight: 700;
+}
+
+.desc-card-solucao {
+  margin-top: 8px;
+}
+
+/* MENTORIA EXPRESS */
+
+.card-mentoria {
+  margin: 24px 20px;
+  padding: 36px 24px;
+  border-radius: 24px;
+  background: radial-gradient(
+    38.28% 40.57% at 50% 50%,
+    #e9caff 0%,
+    #e9caff 100%
+  );
+  box-shadow: 0px 11px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.card-mentoria > ul {
+  margin: 0px 20px;
+}
+
+.tit-mentoria {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.desc-mentoria {
+  text-align: start;
+  margin-top: 12px;
+}
+
+.tit-topicos-mentoria {
+  text-align: start;
+  font-weight: 700;
+  margin-top: 12px;
+  color: var(--roxo-forte);
+}
+
+.topicos-lista-mentoria,
+.topicos-lista-mentoria2 {
+  text-align: start;
+  margin-top: 4px;
+}
+
+.link-saber-mais-mentoria {
+  display: flex;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  padding: 8px 4px;
+  margin: 16px auto 0px;
+  background-color: var(--branco-romance);
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--roxo-forte);
+  text-decoration: none;
+}
+
+/* NOSSOS SERVICOS */
+
+.nossos-servicos {
+  padding-bottom: 36px;
+  border-bottom: solid 1px #05003428;
+  border-width: 8%;
+}
+
+.tit-nossos-servicos {
+  font-weight: 700;
+  margin: 12px 0px 0px 20px;
+}
+
+.card-nossos-servicos {
+  padding: 28px 20px;
+  border-radius: 32px;
+  background: radial-gradient(50% 50% at 50% 50%, #4c43a4 0.56%, #332b80 100%);
+  box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.25);
+  margin: 16px 20px 0px;
+}
+
+.tit-card-nossos-servicos {
+  color: var(--branco-romance);
+  font-weight: 700;
+}
+
+.desc-nossos-servicos {
+  color: var(--branco-romance);
+  margin-top: 16px;
+}
+
+.card-nossos-servicos > ul {
+  margin: 24px 20px;
+}
+
+.topicos-lista-nossos-servicos {
+  color: var(--branco-romance);
+  margin-top: 4px;
+}
+
+.link-saber-mais-nossos-servicos {
+  display: flex;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  padding: 8px 4px;
+  margin: 16px auto 0px;
+  background-color: var(--branco-romance);
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--roxo-forte);
+  text-decoration: none;
+}
+
+/* CONSULTORIA E MENTORIAS */
+
+.tit-consultoria-mentorias {
+  font-weight: 700;
+  margin: 12px 0px 0px 20px;
+}
+
+.subtit-consultoria-mentorias {
+  margin: 8px 20px 0px;
+}
+
+.card-consultoria-mentorias {
+  padding: 28px 20px;
+  border-radius: 32px;
+  background: radial-gradient(50% 50% at 50% 50%, #4c43a4 0.56%, #332b80 100%);
+  box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.25);
+  margin: 16px 20px 0px;
+}
+
+.tit-card-consultoria-mentorias {
+  color: var(--branco-romance);
+  font-weight: 700;
+}
+
+.desc-consultoria-mentorias {
+  color: var(--branco-romance);
+  margin-top: 16px;
+}
+
+.card-consultoria-mentorias > ul {
+  margin: 24px 20px;
+}
+
+.topicos-lista-consultoria-mentorias {
+  color: var(--branco-romance);
+  margin-top: 4px;
+}
+
+.link-saber-mais-consultoria-mentorias {
+  display: flex;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  padding: 8px 4px;
+  margin: 16px auto 0px;
+  background-color: var(--branco-romance);
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--roxo-forte);
+  text-decoration: none;
+}
+
+.text-final-consultoria-mentorias {
+  text-align: center;
+  margin: 32px 20px;
+}
+.text-final-consultoria-mentorias-destaque {
+  font-weight: 700;
+}
+
+/* PROVA SOCIAL */
+
+.prova-social {
+  background: linear-gradient(180deg, #5249a4 0%, #40065a 100%);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.tit-prova-social {
+  color: var(--branco-romance);
+  font-size: 16px;
+}
+
+/* CTA FINAL */
+
+.cta-final {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.tit-cta-final {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.text-cta-final {
+  margin-top: 16px;
+}
+
+.btn-cta-final {
+  font-size: 14px;
+  display: block;
+  color: white;
+  background-color: var(--verde);
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 16px auto;
+  width: 90%;
+  max-width: 250px;
+  text-align: center;
+}
+
+footer {
+  background: linear-gradient(180deg, #0f0c2e 0%, #100017 100%);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.img-bola-logo-final {
+  background-color: var(--branco-romance);
+}
+
+.tit-logo-final {
+  color: var(--branco-romance);
+}
+.subtit-logo-final {
+  color: #fcfcfca9;
+}
+
+.redes-sociais-final {
+  margin-top: 24px;
+}
+
+.text-whatsapp,
+.text-instagram {
+  color: var(--branco-romance);
+}
+
+.textos-finais {
+  margin-top: 24px;
+}
+
+.desenvolvimento-por-clarti,
+.copy-final {
+  color: #fcfcfca9;
+  font-size: 12px;
 }
