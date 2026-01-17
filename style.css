@@ -108,6 +108,8 @@ header {
 
 .box-img-hero {
   text-align: end;
+  margin: 0;
+  padding: 0;
 }
 
 .img-hero-mobile {
