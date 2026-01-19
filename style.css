@@ -515,7 +515,7 @@ footer {
 }
 
 .link-whatsapp-final {
-  width: 12vw;
+  width: auto;
   margin: 0 auto;
   justify-content: center;
   display: flex;
