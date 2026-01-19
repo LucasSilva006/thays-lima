@@ -543,3 +543,127 @@ footer {
 .link-final-clarti:hover {
   color: #677bffe3;
 }
+
+/* RESPONSIVIDADE - 768PX */
+
+@media (min-width: 768px) {
+  header {
+    padding: 11px 10vw;
+  }
+
+  .tit-hero {
+    margin: 32px 10vw;
+  }
+  .subtit-hero {
+    margin: 32px 10vw;
+  }
+
+  .btn-cta-hero {
+    margin: 32px 10vw 0;
+  }
+
+  .img-hero-mobile {
+    width: 70%;
+    height: 70%;
+  }
+
+  .problema {
+    padding: 24px 10vw;
+  }
+
+  .box-dos-cards-solucao {
+    display: flex;
+    margin: 32px 6vw 16px;
+  }
+
+  .card-solucao {
+    width: 32%;
+  }
+
+  .mentoria {
+    padding: 24px 10vw 0;
+  }
+
+  .card-mentoria {
+    width: 70%;
+    margin: 24px auto;
+  }
+
+  .card-nossos-servicos,
+  .card-consultoria-mentorias {
+    width: 70%;
+    margin: 24px auto;
+  }
+
+  .prova-social {
+    padding: 24px 20vw 24px;
+  }
+
+  .text-cta-final {
+    padding: 24px 20vw 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .conteudo-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .box-tit-subtit-ctabtn {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .box-img-hero {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .tit-hero {
+    margin: 12vh 0 7vh 10vw;
+    font-size: 2em;
+  }
+  .subtit-hero {
+    margin: 7vh 0 7vh 10vw;
+    align-self: center;
+    font-size: 1.3em;
+  }
+  .btn-cta-hero {
+    margin: 7vh 10vw;
+    max-height: 60px;
+    align-self: center;
+  }
+
+  .box-img-hero {
+    align-self: end;
+  }
+
+  .img-hero-mobile {
+    width: 100%;
+    height: auto;
+  }
+
+  .nossos-servicos {
+    display: flex;
+  }
+  .tit-nossos-servicos {
+    margin: 48px 0 4px;
+  }
+  .card-nossos-servicos {
+    width: 45%;
+  }
+  .box-dos-cards-consultoria-mentoriais {
+    display: flex;
+  }
+  .card-consultoria-mentorias {
+    width: 45%;
+  }
+
+  .card-mentoria {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-cta-final {
+    padding: 12px 20vw;
+  }
+}
