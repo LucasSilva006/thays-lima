@@ -514,6 +514,14 @@ footer {
   margin-top: 24px;
 }
 
+.link-whatsapp-final {
+  width: 12vw;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+}
+
 .text-whatsapp,
 .text-instagram {
   color: var(--branco-romance);
