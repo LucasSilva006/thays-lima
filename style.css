@@ -22,7 +22,8 @@
 
 :root {
   /* CORES */
-  --verde: #1fb450;
+  --verde: #0e712f;
+  --verde-hover: #08451d;
   --roxo-medio: #332b80;
   --roxo-forte: #080055;
   --roxo-claro: #7822a9;
@@ -85,6 +86,14 @@ header {
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 12px;
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.btn-header:hover {
+  transform: scale(1.05);
+  background-color: var(--verde-hover);
 }
 
 /* HERO SECTION */
@@ -115,6 +124,14 @@ header {
   max-width: 250px;
   margin: 32px 20px;
   text-align: center;
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.btn-cta-hero:hover {
+  transform: scale(1.05);
+  background-color: var(--verde-hover);
 }
 
 .box-img-hero {
@@ -148,7 +165,6 @@ header {
   color: #fff;
   font-size: 1em;
 }
-
 
 .problema {
   padding: 36px 20px;
@@ -208,7 +224,7 @@ header {
 
 .tit-solucao {
   color: var(--branco-romance);
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 36px;
 }
 .tit-solucao-destaque {
@@ -292,6 +308,11 @@ header {
   font-size: 14px;
   color: var(--roxo-forte);
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-saber-mais-mentoria:hover {
+  transform: scale(1.05);
 }
 
 /* NOSSOS SERVICOS */
@@ -347,6 +368,11 @@ header {
   font-size: 14px;
   color: var(--roxo-forte);
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-saber-mais-nossos-servicos:hover {
+  transform: scale(1.05);
 }
 
 /* CONSULTORIA E MENTORIAS */
@@ -400,11 +426,17 @@ header {
   font-size: 14px;
   color: var(--roxo-forte);
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-saber-mais-consultoria-mentorias:hover {
+  transform: scale(1.05);
 }
 
 .text-final-consultoria-mentorias {
   text-align: center;
   margin: 32px 20px;
+  font-size: 16px;
 }
 .text-final-consultoria-mentorias-destaque {
   font-weight: 700;
@@ -451,6 +483,14 @@ header {
   width: 90%;
   max-width: 250px;
   text-align: center;
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.btn-cta-final:hover {
+  transform: scale(1.05);
+  background-color: var(--verde-hover);
 }
 
 footer {
@@ -487,4 +527,11 @@ footer {
 .copy-final {
   color: #fcfcfca9;
   font-size: 12px;
+}
+
+.link-final-clarti {
+  color: #fcfcfca9;
+}
+.link-final-clarti:hover {
+  color: #677bffe3;
 }
