@@ -129,18 +129,29 @@ header {
   height: 90%;
 }
 
-.scroll-inifinito {
-  padding: 8px 0px;
-  background-color: var(--azul-claro);
-  color: white;
+.scroll-infinito {
+  overflow: hidden;
+  background: var(--azul-claro);
+  padding: 8px 0;
+  position: relative;
+  top: -8px;
 }
 
-.text-scroll-infinito {
-  color: white !important;
+.marquee {
+  display: flex;
+  width: max-content;
 }
+
+.marquee span {
+  white-space: nowrap;
+  padding-right: 0.1em;
+  color: #fff;
+  font-size: 1em;
+}
+
 
 .problema {
-  padding: 12px 20px;
+  padding: 36px 20px;
 }
 
 .tit-problema {
@@ -198,7 +209,7 @@ header {
 .tit-solucao {
   color: var(--branco-romance);
   font-size: 14px;
-  margin-top: 24px;
+  margin-top: 36px;
 }
 .tit-solucao-destaque {
   font-weight: 700;
@@ -211,9 +222,11 @@ header {
 .card-solucao {
   background-color: var(--branco-romance);
   padding: 18px 18px;
-  margin: 0 18px 24px;
+  margin: 0 auto 24px;
   border-radius: 16px;
   text-align: start;
+  width: 80%;
+  max-width: 360px;
 }
 
 .tit-card-solucao {
@@ -284,14 +297,14 @@ header {
 /* NOSSOS SERVICOS */
 
 .nossos-servicos {
-  padding-bottom: 36px;
   border-bottom: solid 1px #05003428;
   border-width: 8%;
+  padding: 0px 0px 36px 0px;
 }
 
 .tit-nossos-servicos {
   font-weight: 700;
-  margin: 12px 0px 0px 20px;
+  margin: 36px 0px 24px 20px;
 }
 
 .card-nossos-servicos {
@@ -340,11 +353,11 @@ header {
 
 .tit-consultoria-mentorias {
   font-weight: 700;
-  margin: 12px 0px 0px 20px;
+  margin: 24px 0px 0px 20px;
 }
 
 .subtit-consultoria-mentorias {
-  margin: 8px 20px 0px;
+  margin: 8px 20px 24px;
 }
 
 .card-consultoria-mentorias {
