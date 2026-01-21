@@ -79,6 +79,16 @@ header {
   align-items: center;
 }
 
+.box-nome-e-logo-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nome-logo-header {
+  display: none;
+}
+
 .btn-header {
   display: block;
   color: white;
@@ -549,6 +559,10 @@ footer {
 @media (min-width: 768px) {
   header {
     padding: 11px 10vw;
+  }
+
+  .nome-logo-header {
+    display: block;
   }
 
   .tit-hero {
