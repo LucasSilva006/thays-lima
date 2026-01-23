@@ -74,9 +74,14 @@ li {
 header {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.228);
   display: flex;
+  position: sticky;
+  width: 100%;
+  z-index: 1000;
   padding: 11px 20px;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--branco-romance);
+  top: -1px;
 }
 
 .box-nome-e-logo-header {
@@ -344,6 +349,8 @@ header {
   background: radial-gradient(50% 50% at 50% 50%, #4c43a4 0.56%, #332b80 100%);
   box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.25);
   margin: 16px 20px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tit-card-nossos-servicos {
@@ -363,6 +370,10 @@ header {
 .topicos-lista-nossos-servicos {
   color: var(--branco-romance);
   margin-top: 4px;
+}
+
+.box-link-saber-mais-nossos-servicos {
+  margin-top: auto;
 }
 
 .link-saber-mais-nossos-servicos {
@@ -402,6 +413,8 @@ header {
   background: radial-gradient(50% 50% at 50% 50%, #4c43a4 0.56%, #332b80 100%);
   box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.25);
   margin: 16px 20px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tit-card-consultoria-mentorias {
@@ -421,6 +434,10 @@ header {
 .topicos-lista-consultoria-mentorias {
   color: var(--branco-romance);
   margin-top: 4px;
+}
+
+.box-link-saber-mais-consultoria-mentorias {
+  margin-top: auto;
 }
 
 .link-saber-mais-consultoria-mentorias {
@@ -453,16 +470,97 @@ header {
 }
 
 /* PROVA SOCIAL */
-
 .prova-social {
   background: linear-gradient(180deg, #5249a4 0%, #40065a 100%);
-  padding: 24px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .tit-prova-social {
   color: var(--branco-romance);
   font-size: 16px;
+  margin-bottom: 32px;
+}
+
+/* CARROSSEL */
+.carrossel-prova-social {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* SLIDE */
+.slide {
+  flex: 0 0 100%;
+  padding: 8px;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* BOTÕES */
+.nav {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 44px;
+  height: 36px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.nav:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.meta-cliente {
+  margin-top: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.nome-cliente {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.empresa-cliente {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .slide {
+    flex: 0 0 33.3333%;
+  }
 }
 
 /* CTA FINAL */
@@ -483,19 +581,22 @@ header {
 
 .btn-cta-final {
   font-size: 14px;
-  display: block;
+  display: flex;
   color: white;
   background-color: var(--verde);
-  padding: 8px 12px;
+  padding: 12px 12px;
   text-decoration: none;
   border-radius: 12px;
   margin: 16px auto;
   width: 90%;
-  max-width: 250px;
+  max-width: 300px;
   text-align: center;
   transition:
     background-color 0.2s ease-in-out,
     transform 0.2s ease-in-out;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-cta-final:hover {
@@ -510,9 +611,9 @@ footer {
 }
 
 .img-bola-logo-final {
-  background-color: var(--branco-romance);
+  width: 70px;
+  height: 70px;
 }
-
 .tit-logo-final {
   color: var(--branco-romance);
 }
@@ -524,12 +625,30 @@ footer {
   margin-top: 24px;
 }
 
+.box-link-instagram-final,
+.box-link-whatsapp-final {
+  display: flex;
+  flex-direction: row;
+}
+
 .link-whatsapp-final {
   width: auto;
   margin: 0 auto;
   justify-content: center;
   display: flex;
   text-decoration: none;
+  gap: 8px;
+  align-items: center;
+}
+
+.link-instagram-final {
+  width: auto;
+  margin: 16px auto 4px;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  gap: 8px;
+  align-items: center;
 }
 
 .text-whatsapp,
@@ -552,6 +671,37 @@ footer {
 }
 .link-final-clarti:hover {
   color: #677bffe3;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background: #1ea952;
+  transform: scale(1.1);
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
 }
 
 /* RESPONSIVIDADE - 768PX */

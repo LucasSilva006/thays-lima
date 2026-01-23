@@ -17,3 +17,47 @@ function animate() {
 }
 
 animate();
+
+const track = document.querySelector(".track");
+const slides = Array.from(document.querySelectorAll(".slide"));
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let index = 0;
+let slidesPerView = getSlidesPerView();
+
+function getSlidesPerView() {
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 600) return 2;
+  return 1;
+}
+
+function updateCarousel() {
+  slidesPerView = getSlidesPerView();
+  const slideWidth = slides[0].offsetWidth;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index >= slides.length - slidesPerView;
+}
+
+nextBtn.addEventListener("click", () => {
+  if (index < slides.length - slidesPerView) {
+    index++;
+    updateCarousel();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener("resize", () => {
+  index = 0;
+  updateCarousel();
+});
+
+updateCarousel();
