@@ -41,10 +41,17 @@ function updateCarousel() {
   nextBtn.disabled = index >= slides.length - slidesPerView;
 }
 
+function animateNavButton(button) {
+  button.classList.remove("is-animating");
+  void button.offsetWidth; // força reflow
+  button.classList.add("is-animating");
+}
+
 nextBtn.addEventListener("click", () => {
   if (index < slides.length - slidesPerView) {
     index++;
     updateCarousel();
+    animateNavButton(nextBtn);
   }
 });
 
@@ -52,6 +59,7 @@ prevBtn.addEventListener("click", () => {
   if (index > 0) {
     index--;
     updateCarousel();
+    animateNavButton(prevBtn);
   }
 });
 

@@ -333,14 +333,12 @@ header {
 /* NOSSOS SERVICOS */
 
 .nossos-servicos {
-  border-bottom: solid 1px #05003428;
-  border-width: 8%;
-  padding: 0px 0px 36px 0px;
+  padding: 0px 0px 36px 0;
 }
 
 .tit-nossos-servicos {
   font-weight: 700;
-  margin: 36px 0px 24px 20px;
+  margin: 36px 0px 24px 10vw;
 }
 
 .card-nossos-servicos {
@@ -400,11 +398,19 @@ header {
 
 .tit-consultoria-mentorias {
   font-weight: 700;
-  margin: 24px 0px 0px 20px;
+  margin: 24px 0px 0px 10vw;
 }
 
 .subtit-consultoria-mentorias {
-  margin: 8px 20px 24px;
+  margin: 8px 20px 24px 10vw;
+}
+
+.img-consultorias-mentorias {
+  border: 4px solid #332b80;
+  border-left: none;
+  border-radius: 0 24px 24px 0;
+  width: 90vw;
+  height: 100%;
 }
 
 .card-consultoria-mentorias {
@@ -462,7 +468,7 @@ header {
 
 .text-final-consultoria-mentorias {
   text-align: center;
-  margin: 32px 20px;
+  margin: 32px 20px 32px 10vw;
   font-size: 16px;
 }
 .text-final-consultoria-mentorias-destaque {
@@ -515,11 +521,11 @@ header {
 .slide img {
   width: 100%;
   object-fit: contain;
-  border-radius: 12px;
   height: 85%;
 }
 
 /* BOTÕES */
+/* base continua a mesma */
 .nav {
   background: transparent;
   border: none;
@@ -528,13 +534,41 @@ header {
   height: 36px;
   border-radius: 100%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.3s;
+}
+
+/* animação pulse */
+@keyframes navPulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* classe que ativa a animação */
+.nav.is-animating {
+  animation: navPulse 0.35s ease;
+}
+
+/* feedback toque mobile */
+.nav:active:not(:disabled) {
+  transform: scale(0.9);
 }
 
 .nav:disabled {
   opacity: 0.3;
   cursor: default;
 }
+
+
 
 .meta-cliente {
   margin-top: 12px;
@@ -750,13 +784,30 @@ footer {
   }
 
   .mentoria {
-    padding: 24px 10vw 0;
+    padding: 24px 10vw 0 0;
+  }
+
+  .box-card-mentoria {
+    padding: 24px 0 0 10vw;
   }
 
   .card-mentoria {
-    width: 70%;
     margin: 24px auto;
   }
+
+  .nossos-servicos {
+    margin-left: 10vw;
+  }
+
+  hr {
+    margin-left: 10vw;
+  }
+
+  .box-dos-cards-consultoria-mentorias {
+    margin: 0px 0px 24px 10vw;
+  }
+
+
 
   .card-nossos-servicos,
   .card-consultoria-mentorias {
@@ -814,12 +865,21 @@ footer {
   .nossos-servicos {
     display: flex;
   }
+
   .tit-nossos-servicos {
-    margin: 48px 0 4px;
+    margin: 48px 0 4px 10vw;
   }
   .card-nossos-servicos {
     width: 45%;
   }
+
+  .picture-consultorias-mentorias {
+    display: block;
+    width: 40vw;
+    margin: 5vh 0px;
+  }
+
+  
   .box-dos-cards-consultoria-mentoriais {
     display: flex;
   }
@@ -831,8 +891,35 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .box-img-e-cards-mentorias-consultorias {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .img-consultorias-mentorias {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .box-img-consultorias-mentorias {
+    max-width: 100%;
+    max-height: 30%;
+  }
+
+  .card-consultoria-mentorias {
+    width: 100%;
+  }
 
   .text-cta-final {
     padding: 12px 20vw;
+  }
+}
+
+@media (min-width: 144px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
