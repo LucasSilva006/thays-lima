@@ -505,75 +505,35 @@ header {
 
 .track {
   display: flex;
+  gap: 16px; /* espaçamento entre os cards */
   transition: transform 0.4s ease;
 }
 
-/* SLIDE */
+/* SLIDE (CARD DE TEXTO) */
 .slide {
   flex: 0 0 100%;
-  padding: 8px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  border-radius: 14px;
+  min-height: 260px;
+  gap: 24px;
 }
 
-.slide img {
-  width: 100%;
-  object-fit: contain;
-  height: 85%;
+/* TEXTO DO DEPOIMENTO */
+.texto-depoimento {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: start;
 }
 
-/* BOTÕES */
-/* base continua a mesma */
-.nav {
-  background: transparent;
-  border: none;
-  color: #fff;
-  width: 44px;
-  height: 36px;
-  border-radius: 100%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s;
-}
-
-/* animação pulse */
-@keyframes navPulse {
-  0% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* classe que ativa a animação */
-.nav.is-animating {
-  animation: navPulse 0.35s ease;
-}
-
-/* feedback toque mobile */
-.nav:active:not(:disabled) {
-  transform: scale(0.9);
-}
-
-.nav:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-
-
+/* META CLIENTE */
 .meta-cliente {
-  margin-top: 12px;
+  margin-top: 16px;
   text-align: center;
-  color: #fff;
+  color: var(--roxo-forte);
 }
 
 .nome-cliente {
@@ -588,10 +548,55 @@ header {
   opacity: 0.8;
 }
 
+/* BOTÕES */
+.nav {
+  background: transparent;
+  border: none;
+  width: 44px;
+  height: 36px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+@keyframes navPulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav.is-animating {
+  animation: navPulse 0.35s ease;
+}
+
+.nav:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.nav:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
 /* TABLET */
 @media (min-width: 600px) {
   .slide {
     flex: 0 0 50%;
+    min-height: 280px;
+    max-width: 45%;
+  }
+
+  .texto-depoimento {
+    font-size: 15px;
   }
 }
 
@@ -599,6 +604,12 @@ header {
 @media (min-width: 1024px) {
   .slide {
     flex: 0 0 33.3333%;
+    min-height: 300px;
+    max-width: 30%;
+  }
+
+  .texto-depoimento {
+    font-size: 15.5px;
   }
 }
 
@@ -807,8 +818,6 @@ footer {
     margin: 0px 0px 24px 10vw;
   }
 
-
-
   .card-nossos-servicos,
   .card-consultoria-mentorias {
     width: 70%;
@@ -816,7 +825,7 @@ footer {
   }
 
   .prova-social {
-    padding: 24px 20vw 24px;
+    padding: 32px 4px;
   }
 
   .text-cta-final {
@@ -873,13 +882,17 @@ footer {
     width: 45%;
   }
 
+  .mentoria {
+    padding: 24px 0 0 0;
+  }
+
   .picture-consultorias-mentorias {
     display: block;
     width: 40vw;
+    max-width: 576px;
     margin: 5vh 0px;
   }
 
-  
   .box-dos-cards-consultoria-mentoriais {
     display: flex;
   }
@@ -899,7 +912,8 @@ footer {
 
   .img-consultorias-mentorias {
     display: flex;
-    max-width: 100%;
+    width: 100%;
+    max-width: 576px;
     max-height: 100%;
   }
 
@@ -917,7 +931,7 @@ footer {
   }
 }
 
-@media (min-width: 144px) {
+@media (min-width: 1440px) {
   body {
     max-width: 1440px;
     margin: 0 auto;

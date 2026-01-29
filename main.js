@@ -32,14 +32,24 @@ function getSlidesPerView() {
   return 1;
 }
 
+function getGap() {
+  const style = window.getComputedStyle(track);
+  return parseFloat(style.gap) || 0;
+}
+
 function updateCarousel() {
   slidesPerView = getSlidesPerView();
+
   const slideWidth = slides[0].offsetWidth;
-  track.style.transform = `translateX(-${index * slideWidth}px)`;
+  const gap = getGap();
+  const moveX = index * (slideWidth + gap);
+
+  track.style.transform = `translateX(-${moveX}px)`;
 
   prevBtn.disabled = index === 0;
   nextBtn.disabled = index >= slides.length - slidesPerView;
 }
+
 
 function animateNavButton(button) {
   button.classList.remove("is-animating");
