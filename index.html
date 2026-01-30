@@ -254,23 +254,23 @@
               <picture class="picture-consultorias-mentorias">
                 <!-- Desktop grande -->
                 <source
-                  srcset="assets/images/img-consultoria-desktop.jpg"
+                  srcset="assets/images/img-consultoria-desktop.webp"
                   media="(min-width: 1023px)"
                 />
 
                 <!-- Tablet / desktop médio -->
                 <source
-                  srcset="assets/images/img-consultoria-m3.jpg"
+                  srcset="assets/images/img-consultoria-m3.webp"
                   media="(min-width: 768px)"
                 />
 
                 <!-- Mobile (fallback) -->
                 <img
-                  src="assets/images/img-consultoria-qd.jpg"
+                  src="assets/images/img-consultoria-qd.webp"
                   alt="Imagem da Thays em Evento"
                   width="300"
                   height="225"
-                  class="img-consultorias-mentorias"
+                  class="img-consultorias-mentorias" fetchpriority="low"
                 />
               </picture>
             </div>
@@ -368,7 +368,7 @@
               src="assets/images/icons/seta-esquerda.svg"
               alt="Anterior"
               width="30"
-              height="30"
+              height="30" fetchpriority="low"
             />
           </button>
 
@@ -448,7 +448,7 @@
               src="assets/images/icons/seta-direita.svg"
               alt="Próximo"
               width="30"
-              height="30"
+              height="30" fetchpriority="low"
             />
           </button>
         </div>
@@ -468,8 +468,8 @@
             src="assets/images/icons/icon-whatsapp.png"
             alt="Ícone do Whatsapp no CTA"
             width="20"
-            height="20"
-        /></a>
+            height="20" fetchpriority="low"
+        /></a> 
       </section>
     </main>
     <footer>
@@ -479,7 +479,7 @@
           alt="Logo Final da Lima Comunica"
           width="65"
           height="35"
-          class="img-bola-logo-final"
+          class="img-bola-logo-final" fetchpriority="low"
         />
         <h3 class="tit-logo-final">Thays Lima | Estrategista de Marketing</h3>
         <p class="subtit-logo-final">
@@ -496,7 +496,7 @@
                 src="assets/images/icons/icon-whatsapp.png"
                 alt="Ícone do WhatsApp - Footer"
                 width="25"
-                height="25"
+                height="25" fetchpriority="low"
               />
               <p class="text-whatsapp">Fale comigo</p></a
             >
@@ -511,7 +511,7 @@
                 src="assets/images/icons/icon-instagram.png"
                 alt="Ícone do Instagram - Footer"
                 width="25"
-                height="25"
+                height="25" fetchpriority="low"
               />
               <p class="text-instagram">Thays Lima</p>
             </a>
@@ -543,6 +543,7 @@
         src="assets/images/icons/icon-whatsapp.png"
         alt="WhatsApp"
         class="whatsapp-icon"
+        fetchpriority="low"
       />
     </a>
     <script src="main.js"></script>
