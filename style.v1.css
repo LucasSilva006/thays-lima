@@ -795,11 +795,11 @@ footer {
   }
 
   .mentoria {
-    padding: 24px 10vw 0 0;
+    padding: 24px 0 0 0;
   }
 
   .box-card-mentoria {
-    padding: 24px 0 0 10vw;
+    padding: 24px 10vw 0 10vw;
   }
 
   .card-mentoria {
@@ -807,15 +807,15 @@ footer {
   }
 
   .nossos-servicos {
-    margin-left: 10vw;
+    margin: 0 10vw;
   }
 
   hr {
-    margin-left: 10vw;
+    margin: 0 10vw;
   }
 
   .box-dos-cards-consultoria-mentorias {
-    margin: 0px 0px 24px 10vw;
+    margin: 0px 0px 24px 0;
   }
 
   .card-nossos-servicos,
@@ -893,9 +893,10 @@ footer {
     margin: 5vh 0px;
   }
 
-  .box-dos-cards-consultoria-mentoriais {
-    display: flex;
+  .box-dos-cards-consultoria-mentorias {
+    margin: 0 10vw;
   }
+
   .card-consultoria-mentorias {
     width: 45%;
   }
